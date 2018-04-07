@@ -1,0 +1,652 @@
+
+用户注册
+
+url:http://www.mzstar.cn:8080/Mozi/user/addUser
+
+参数：
+{"account":"12345678","password":"123456","name":"小明","age":"12","gender":"男","phone":"122","address":"122","wechat":"122","qq":"122","weight":"122","height":"17","borm":"1522480006949"}
+
+返回：
+{
+  "message": "添加成功！！！",
+  "code": 200
+}
+
+
+========================================================================================================
+
+用户登录
+
+url:http://www.mzstar.cn:8080/Mozi/user/landingUser
+参数：
+{"account":"123456","password":"123456"}
+
+返回
+{
+  "message": "登陆成功！！！",
+  "code": 200,
+  "data": {
+    "id": 4,
+    "role": null,
+    "account": "123456",
+    "password": "E10ADC3949BA59ABBE56E057F20F883E",
+    "name": "小明",
+    "age": 12,
+    "gender": "男",
+    "phone": "122",
+    "address": "122",
+    "avatar": null,
+    "wechat": "122",
+    "qq": "122",
+    "createtime": null,
+    "atlasttime": 1521191384442,
+    "weight": 122,
+    "height": 17,
+    "borm": null
+  }
+}
+==========================================================================================================
+
+该数据直接带参数
+
+用户头像上传
+url : http://www.mzstar.cn:8080/Mozi/user/uploadavatar
+
+参数：avatar  文件    id  用户id
+
+返回
+
+{
+  "message": "头像上传成功！！!",
+  "code": 200
+}
+==============================================================================================================
+用户头像修改
+url: http://www.mzstar.cn:8080/Mozi/user/updateavatar
+
+参数：avatar  文件    id  用户id
+
+返回
+
+{
+  "message": "修改头像成功！！!",
+  "code": 200
+}
+
+
+====================================================================================================================
+修改用户基本信息
+
+url:   http://www.mzstar.cn:8080/Mozi/user/updateUser
+
+参数：  
+{"account":"1234561","password":"123456","name":"小明5","age":"12","gender":"男","phone":"122","address":"122","wechat":"122","qq":"122","weight":"122","height":"17","id":"5"}
+
+
+
+返回：
+{
+  "message": "修改成功！！!",
+  "code": 200
+}
+
+
+
+======================================================================================================================
+获取验证码
+
+url: http://www.mzstar.cn:8080/Mozi/user/sendSMS
+
+参数：  {"phone":"13539264097"}
+
+
+返回：
+{
+  "message": "发送验证码成功！！！",
+  "code": 200,
+  "data": 128243
+}
+
+=======================================================================================================================
+修改用户密码
+
+url:   http://www.mzstar.cn:8080/Mozi/user/updatepassword
+
+
+参数：
+
+{"newpassword":"123456","password":"12345678","id":"5"}
+
+
+
+
+返回：
+
+{
+  "message": "修改成功！！!",
+  "code": 200
+}
+
+==================================================================================================================================
+
+添加闹钟
+
+url: http://www.mzstar.cn:8080/Mozi/clock/addClock
+
+参数：{"clockdate":"11:11","current":"闹钟","imei":"123456","frequency":"每天"}
+
+返回：
+{
+  "message": "添加闹钟成功！！！",
+  "code": 200
+}
+
+
+======================================================================================================================
+
+修改闹钟
+
+url: http://www.mzstar.cn:8080/Mozi/clock/updateClock
+
+参数： {"clockdate":"11:11","current":"每天","imei":"123456","frequency":"11","status":"1","id":"1"}
+
+返回：
+
+{
+  "message": "修改闹钟成功！！！",
+  "code": 200
+}
+
+
+==================================================================================================================
+
+
+删除闹钟
+
+url: http://www.mzstar.cn:8080/Mozi/clock/deleteClock
+
+参数：{"id":"1"}
+
+返回：
+
+{
+  "message": "删除闹钟成功！！！",
+  "code": 200
+}
+
+
+
+==============================================================================================================
+获取闹钟数据
+
+url: http://www.mzstar.cn:8080/Mozi/clock/selectclocks
+
+参数 ：{"imei":"123456"}
+
+返回：
+{
+  "message": "获取闹钟数据成功！！！",
+  "code": 200,
+  "data": [
+    {
+      "id": 3,
+      "clockdate": "11:11",
+      "current": "每天",
+      "imei": "123456",
+      "frequency": "11",
+      "status": "待执行",
+      "cratetime": 1521804643000
+    }
+  ]
+}
+
+
+===================================================================================================huoqu==========
+获取广告数据
+
+url:   http://www.mzstar.cn:8080/Mozi/advertising/applist
+
+参数：{"pageNo":"","keyword":""}
+
+返回  
+{
+  "message": "获取广告数据成功！！！",
+  "code": 200,
+  "data": [
+    {
+      "id": 1,
+      "managementId": 1,
+      "imgVideo": "http://120.76.201.150:8080/advertising/微信图片_20180301155615.png",
+      "title": "11",
+      "createtime": 1521691880000,
+      "content": "11"
+    }
+  ]
+}
+
+===========================================================================================================================
+获取轮播图片
+
+url:  http://www.mzstar.cn:8080/Mozi/carousel/applist
+
+参数 ： 
+返回：
+{
+  "message": "获取轮播图片成功！！！",
+  "code": 200,
+  "data": [
+    {
+      "id": 4,
+      "managementId": 1,
+      "img": "http://120.76.201.150:8080/Carousel/微信图片_20180301155615.png",
+      "title": "2",
+      "createtime": 1521698889000
+    }
+  ]
+}
+===============================================================================================================================
+获取用户最新定位信息
+url :http://192.168.1.137:8080/Mozi/positionig/selectimeiPositionig
+
+参数： {"imei":"425325"}
+
+返回：
+{
+  "message": "获取定位信息成功！！！",
+  "code": 200,
+  "data": "省：北京市，市：北京市，区：海淀区"
+}
+
+===============================================================================================================================
+添加留言
+url http://www.mzstar.cn:8080/Mozi/leave/addLeave
+
+参数： {"account":"12533","content":"留言"}
+
+返回：
+{
+  "message": "添加留言成功！！！",
+  "code": 200
+}
+
+==================================================================================================================================
+
+
+
+app发送信息给硬件
+
+url : http://www.mzstar.cn:8080/Mozi/chat/sendMessage
+参数： {"imei":"425325","message":"信息"}
+
+返回：
+{
+  "message": "发送信息成功！！！",
+  "code": 200
+}
+
+
+==================================================================================================================================
+添加监护者
+
+
+url http://www.mzstar.cn:8080/Mozi/usereq/addguardianship
+
+参数：  {"userId":"4","imei":"1"}
+
+返回：
+{
+  "message": "添加设备监护者成功！！！",
+  "code": 200
+}
+
+==============================================================================================================================
+添加观察者
+
+
+url http://www.mzstar.cn:8080/Mozi/usereq/addObserved
+
+参数：  {"userId":"4","imei":"1","authorized":"未授权"}
+
+返回：
+{
+  "message": "添加设备观察者成功！！！",
+  "code": 200
+}
+===============================================================================================================================
+
+添加使用者
+
+
+url : http://www.mzstar.cn:8080/Mozi/usereq/adduse
+参数：  {"userId":"4","imei":"1"}
+
+返回：
+{
+  "message": "添加设备使用者成功！！！",
+  "code": 200
+}
+=========================================================================================================================
+
+获取设备的所有管理人员数据
+
+
+url : http://www.mzstar.cn:8080/Mozi/usereq/selectusereq
+参数：   {"imei":"425325"}
+
+返回：
+{
+  "message": "获取设备操作者成功！！！",
+  "code": 200,
+  "data": [
+    {
+      "id": 5,
+      "role": "监护者",
+      "account": "123456",
+      "password": "E10ADC3949BA59ABBE56E057F20F883E",
+      "name": "小洪",
+      "age": 12,
+      "gender": null,
+      "phone": null,
+      "address": null,
+      "avatar": null,
+      "wechat": null,
+      "qq": null,
+      "createtime": null,
+      "atlasttime": null,
+      "weight": null,
+      "height": null,
+      "borm": null
+    },
+    {
+      "id": 4,
+      "role": "观察者",
+      "account": "123456",
+      "password": "E10ADC3949BA59ABBE56E057F20F883E",
+      "name": "小明",
+      "age": 12,
+      "gender": "男",
+      "phone": "122",
+      "address": "122",
+      "avatar": "http://www.mzstar.cn:8080/avatars/timg.jpg",
+      "wechat": "122",
+      "qq": "122",
+      "createtime": 1521688992000,
+      "atlasttime": 1521424750000,
+      "weight": 122,
+      "height": 17,
+      "borm": null
+    },
+    {
+      "id": 4,
+      "role": "观察者",
+      "account": "123456",
+      "password": "E10ADC3949BA59ABBE56E057F20F883E",
+      "name": "小明",
+      "age": 12,
+      "gender": "男",
+      "phone": "122",
+      "address": "122",
+      "avatar": "http://www.mzstar.cn:8080/avatars/timg.jpg",
+      "wechat": "122",
+      "qq": "122",
+      "createtime": 1521688992000,
+      "atlasttime": 1521424750000,
+      "weight": 122,
+      "height": 17,
+      "borm": null
+    }
+  ]
+}
+================================================================================================================================================================
+
+删除设备操作者数据（监护者，观察者，使用者）
+
+url : http://www.mzstar.cn:8080/Mozi/usereq/deleteequse
+参数：   {"imei":"425325","userId":"4","typeof":"1"}
+
+返回：
+{
+  "message": "删除成功！！！",
+  "code": 200
+}
+
+=====================================================================================
+点击用户id生成二维码接入观察者
+
+url: http://www.mzstar.cn:8080/Mozi/qrcode/generateqrcode
+
+参数：{"userId":"5"}
+
+返回：
+{
+  "message": "生成二维码！！！",
+  "code": 200,
+  "data": "http://192.168.1.108:8080/Mozi/usereq/addqrcodObserved?imei=425325&authorized=已授权&userId="
+}
+========================================================================================
+获取用户最新健康数据
+ 
+ url : http://www.mzstar.cn:8080/Mozi/equipmentData/selectdata
+ 
+ 请求参数： {"imei":"425325"}
+ 
+ 返回：
+ {
+  "message": "获取用户最新健康数据成功！！！",
+  "code": 200,
+  "data": {
+    "id": 17,
+    "userId": 4,
+    "heartrate": 11,
+    "highpressure": "11",
+    "bottompressure": "11",
+    "bloodpressure": "11",
+    "mocrocirculation": "11",
+    "breathe": "11",
+    "sleeping": "11",
+    "stepWhen": 11,
+    "carrieroad": "11",
+    "sedentary": "11",
+    "movementstate": "11",
+    "bodytemp": "11",
+    "humidity": "11",
+    "crash": "11",
+    "createtime": 1522834363000,
+    "qxygen": "11",
+    "sleepingS": "11",
+    "runS": "11",
+    "stepTime": 11,
+    "stepEach": 1111,
+    "hrv": "11",
+    "mood": "11"
+  }
+}
+
+
+===================================================================================
+
+获取设备基本信息
+
+url : http://www.mzstar.cn:8080/Mozi/equipment/selectEquipment
+
+参数： {"imei":"425325"}
+
+返回：
+{
+  "message": "获取设备基本信息成功！！！",
+  "code": 200,
+  "data": {
+    "id": 1,
+    "imei": "425325",
+    "lordpower": 78,
+    "signalxhao": "17",
+    "bluetoothType": null,
+    "eqStatus": null,
+    "createtime": null,
+    "updatetime": 1522656421000,
+    "eqtype": "1",
+    "bluetoothName": null,
+    "bluetoothStatus": null,
+    "bluetoothElectricity": null,
+    "clock": null,
+    "phone1": null,
+    "phone2": null,
+    "uploadtime": null
+  }
+}
+
+===================================================================================================
+
+获取步数数据  （根据年月日 周）查找
+
+url http://www.mzstar.cn:8080/Mozi/equipmentData/selectstepsDate
+
+timedata （周不需要带该参数）（年 2018  ）（月份 2018-2  ）（日份 2018-2-3  ）
+service   （周  week）  （月  month）   （年 year）  （日  day）
+
+
+参数：{"service":"day","imei":"425325","timedata":"2018-04-03"}
+
+返回：
+{
+  "message": "获取步数健康数据成功！！！",
+  "code": 200,
+  "data": {
+    "stepss": [
+      {
+        "id": 0,
+        "stepcount": 10,
+        "stepdatetime": 1522739579000
+      },
+      {
+        "id": 1,
+        "stepcount": 11,
+        "stepdatetime": 1522747963000
+      },
+      {
+        "id": 2,
+        "stepcount": 11,
+        "stepdatetime": 1522748798000
+      }
+    ],
+    "stepsduration": "0天-2小时-33分",
+    "runduration": "0天-1小时-16分",
+    "actiondistance": "0.0公里",
+    "totalsteps": "32",
+    "targetsteps": "11",
+    "heat": null
+  }
+}
+
+===========================================================================================
+
+获取睡眠数据  （根据年月日 周）查找
+
+url http://www.mzstar.cn:8080/Mozi/equipmentData/selectsleepingDate
+
+timedata （周不需要带该参数）（年 2018  ）（月份 2018-2  ）（日份 2018-2-3  ）
+service   （周  week）  （月  month）   （年 year）  （日  day）
+参数：{"service":"day","imei":"425325","timedata":"2018-04-03"}
+
+返回：
+{
+  "message": "获取睡眠数健康数据成功！！！",
+  "code": 200,
+  "data": {
+    "sleepings": [
+      {
+        "id": 0,
+        "sleeping": "1.5",
+        "sleepingtime": 1522739579000
+      },
+      {
+        "id": 1,
+        "sleeping": "5.3",
+        "sleepingtime": 1522747963000
+      },
+      {
+        "id": 2,
+        "sleeping": "8.40",
+        "sleepingtime": 1522748798000
+      }
+    ],
+    "depthsleepings": "5.3",
+    "shallowsleepings": "9.9",
+    "awakeningtime": "0.0",
+    "totalsleeping": "15.2"
+  }
+}
+=======================================================================================================================
+app获取设备管理人员以及状态，定位，闹钟，发送信息，状态等数据
+
+url :  http://www.mzstar.cn:8080/Mozi/usereq/selelctUsereqvo
+
+参数： {"imei":"425325"}
+
+返回：
+{
+  "message": "获取设备管理员信息成功！！！",
+  "code": 200,
+  "data": [
+    {
+      "iconPath": null,
+      "username": "小洪",
+      "bluetoothStatus": null,
+      "userStatus": "跑步",
+      "deviceEnergy": null,
+      "userid": 5,
+      "managenment": "观察者",
+      "loactionStatus": "否",
+      "messageStatus": "否",
+      "aclokStatus": "否"
+    },
+    {
+      "iconPath": "http://localhost:8080/avatars/timg.jpg",
+      "username": "小明",
+      "bluetoothStatus": null,
+      "userStatus": "跑步",
+      "deviceEnergy": null,
+      "userid": 4,
+      "managenment": "使用者",
+      "loactionStatus": "否",
+      "messageStatus": "否",
+      "aclokStatus": "否"
+    },
+    {
+      "iconPath": null,
+      "username": "小洪",
+      "bluetoothStatus": null,
+      "userStatus": "跑步",
+      "deviceEnergy": null,
+      "userid": 5,
+      "managenment": "观察者",
+      "loactionStatus": "否",
+      "messageStatus": "否",
+      "aclokStatus": "否"
+    }
+  ]
+}
+=================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
