@@ -1,10 +1,10 @@
 
-用户注册11
+用户注册
 
 url:http://www.mzstar.cn:8080/Mozi/user/addUser
 
 参数：
-{"account":"12345678","password":"123456","name":"小明","age":"12","gender":"男","phone":"122","address":"122","wechat":"122","qq":"122","weight":"122","height":"17","borm":"1522480006949"}
+{"account":"12345678","password":"123456","name":"小明","age":"12","gender":"男","phone":"122","address":"122","code":"56123","wechat":"122","qq":"122","weight":"122","height":"17","borm":"1522480006949"}
 
 返回：
 {
@@ -104,7 +104,7 @@ url: http://www.mzstar.cn:8080/Mozi/user/sendSMS
 {
   "message": "发送验证码成功！！！",
   "code": 200,
-  "data": 128243
+ 
 }
 
 =======================================================================================================================
