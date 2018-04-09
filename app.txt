@@ -577,6 +577,79 @@ service   （周  week）  （月  month）   （年 year）  （日  day）
   }
 }
 =======================================================================================================================
+获取心率数据  （根据年月日 周）查找
+url:  http://www.mzstar.cn:8080/Mozi/health/selecthealth
+
+
+
+timedata （周不需要带该参数）（年 2018  ）（月份 2018-2  ）（日份 2018-2-3  ）
+service   （周  week）  （月  month）   （年 year）  （日  day）
+参数：{"service":"month","imei":"425325","timedata":"2018-04"}
+
+返回：
+
+{
+  "message": "获取心率健康数据成功！！！",
+  "code": 200,
+  "data": {
+    "hs": [
+
+     
+      {
+        "id": 8,
+        "heartrate": 65,
+        "createtime": 1523172442000
+      },
+      {
+        "id": 9,
+        "heartrate": 70,
+        "createtime": 1523178525000
+      }
+    ],
+    "average": 9,
+    "inHeart": "0天0小时1分",
+    "bigHeart": "0天0小时3分",
+    "strongHeart": "0天0小时0分"
+  }
+}
+
+
+=======================================================================================================================
+获取血压数据  （根据年月日 周）查找
+url:  http://www.mzstar.cn:8080/Mozi/health/bloodpressure
+
+timedata （周不需要带该参数）（年 2018  ）（月份 2018-2  ）（日份 2018-2-3  ）
+service   （周  week）  （月  month）   （年 year）  （日  day）
+参数：{"service":"month","imei":"425325","timedata":"2018-04"}
+
+返回：
+{
+  "message": "获取血压健康数据成功！！！",
+  "code": 200,
+  "data": {
+    "bs": [
+      {
+        "id": 1,
+        "pressure": 93,
+        "createtime": 1523172275000,
+        "oxygen": 99
+      },
+      {
+        "id": 2,
+        "pressure": 93,
+        "createtime": 1523172328000,
+        "oxygen": 99
+      }
+    ],
+    "average": "104/99mmHg",
+    "bhigh": "193/99mmHg",
+    "blow": "93/99mmHg"
+  }
+}
+
+
+
+=========================================================================================================================
 app获取设备管理人员以及状态，定位，闹钟，发送信息，状态等数据
 
 url :  http://www.mzstar.cn:8080/Mozi/usereq/selelctUsereqvo
@@ -589,44 +662,22 @@ url :  http://www.mzstar.cn:8080/Mozi/usereq/selelctUsereqvo
   "code": 200,
   "data": [
     {
-      "iconPath": null,
-      "username": "小洪",
-      "bluetoothStatus": null,
-      "userStatus": "跑步",
-      "deviceEnergy": null,
-      "userid": 5,
-      "managenment": "观察者",
-      "loactionStatus": "否",
-      "messageStatus": "否",
-      "aclokStatus": "否"
-    },
-    {
-      "iconPath": "http://localhost:8080/avatars/timg.jpg",
+      "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
       "username": "小明",
       "bluetoothStatus": null,
       "userStatus": "跑步",
       "deviceEnergy": null,
-      "userid": 4,
+      "userid": 13,
       "managenment": "使用者",
-      "loactionStatus": "否",
-      "messageStatus": "否",
-      "aclokStatus": "否"
-    },
-    {
-      "iconPath": null,
-      "username": "小洪",
-      "bluetoothStatus": null,
-      "userStatus": "跑步",
-      "deviceEnergy": null,
-      "userid": 5,
-      "managenment": "观察者",
-      "loactionStatus": "否",
-      "messageStatus": "否",
-      "aclokStatus": "否"
+      "loactionStatus": true,
+      "messageStatus": true,
+      "aclokStatus": true
     }
   ]
 }
 =================================================================================================================================================
+
+
 
 
 
