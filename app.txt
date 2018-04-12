@@ -244,7 +244,7 @@ url:  http://www.mzstar.cn:8080/Mozi/carousel/applist
 }
 ===============================================================================================================================
 获取用户最新定位信息
-url :http://192.168.1.137:8080/Mozi/positionig/selectimeiPositionig
+url : http://www.mzstar.cn:8080/Mozi/positionig/selectimeiPositionig
 
 参数： {"imei":"425325"}
 
@@ -648,11 +648,13 @@ service   （周  week）  （月  month）   （年 year）  （日  day）
 
 
 =========================================================================================================================
-app获取设备管理人员以及状态，定位，闹钟，发送信息，状态等数据
+获取设备管理人员以及状态，定位，闹钟，发送信息，状态,健康数据等
 
 url :  http://www.mzstar.cn:8080/Mozi/usereq/selelctUsereqvo
-
-参数： {"imei":"425325"}
+ 
+ 多个imei  用逗号分开
+ 
+参数：  {"imeis":"425325,861358039525993"}
 
 返回：
 {
@@ -660,23 +662,84 @@ url :  http://www.mzstar.cn:8080/Mozi/usereq/selelctUsereqvo
   "code": 200,
   "data": [
     {
-      "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
-      "username": "小明",
-      "bluetoothStatus": null,
-      "userStatus": "跑步",
-      "deviceEnergy": null,
-      "userid": 13,
-      "managenment": "使用者",
-      "loactionStatus": true,
-      "messageStatus": true,
-      "aclokStatus": true
+      "uevo": [
+        {
+          "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+          "username": "小明",
+          "bluetoothStatus": null,
+          "userStatus": "跑步",
+          "deviceEnergy": null,
+          "userid": 13,
+          "managenment": "使用者",
+          "loactionStatus": false,
+          "messageStatus": false,
+          "aclokStatus": false
+        }
+      ],
+      "eqdata": {
+        "id": 21,
+        "userId": 13,
+        "heartrate": null,
+        "highpressure": null,
+        "bottompressure": null,
+        "bloodpressure": null,
+        "mocrocirculation": null,
+        "breathe": null,
+        "sleeping": "0",
+        "stepWhen": 0,
+        "carrieroad": "0",
+        "sedentary": "0",
+        "movementstate": "0",
+        "bodytemp": null,
+        "humidity": null,
+        "crash": "0",
+        "createtime": 1523412055000,
+        "qxygen": null,
+        "sleepingS": null,
+        "runS": null,
+        "stepTime": null,
+        "stepEach": null,
+        "hrv": null,
+        "mood": null
+      },
+      "imei": "425325"
+    },
+    {
+      "uevo": [
+        {
+          "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+          "username": "小明",
+          "bluetoothStatus": null,
+          "userStatus": "跑步",
+          "deviceEnergy": null,
+          "userid": 13,
+          "managenment": "观察者",
+          "loactionStatus": false,
+          "messageStatus": false,
+          "aclokStatus": false
+        },
+        {
+          "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+          "username": "小明",
+          "bluetoothStatus": null,
+          "userStatus": "跑步",
+          "deviceEnergy": null,
+          "userid": 13,
+          "managenment": "观察者",
+          "loactionStatus": false,
+          "messageStatus": false,
+          "aclokStatus": false
+        }
+      ],
+      "eqdata": null,
+      "imei": "861358039525993"
     }
   ]
 }
 =================================================================================================================================================
 获取用户相关联的设备信息
 
-url:  http://www.mzstar.cn:8080/Mozi/equipment/selelctequipments
+url:  http://www.mzstar.cn:8080/Mozi/equipment/userequipments
 
 参数：{"userId":"13"}
 
@@ -688,28 +751,28 @@ url:  http://www.mzstar.cn:8080/Mozi/equipment/selelctequipments
     {
       "id": 3,
       "imei": "425325",
-      "eqStatus": "在线",
-      "eqtype": "1",
+      "eqStatus": false,
+      "eqtype": 1,
       "createtime": 1523168392000,
-      "updatetime": 1523333599000,
+      "updatetime": 1523412055000,
       "role": "使用者"
     },
     {
       "id": 5,
       "imei": "425326",
-      "eqStatus": "在线",
-      "eqtype": "1",
+      "eqStatus": false,
+      "eqtype": 1,
       "createtime": 1523347820000,
-      "updatetime": 1523347820000,
+      "updatetime": 1523353415000,
       "role": "监护者"
     },
     {
       "id": 5,
       "imei": "425326",
-      "eqStatus": "在线",
-      "eqtype": "1",
+      "eqStatus": false,
+      "eqtype": 1,
       "createtime": 1523347820000,
-      "updatetime": 1523347820000,
+      "updatetim
       "role": "使用者"
     }
   ]
