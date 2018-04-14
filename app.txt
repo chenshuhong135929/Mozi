@@ -650,7 +650,7 @@ service   （周  week）  （月  month）   （年 year）  （日  day）
 =========================================================================================================================
 获取设备管理人员以及状态，定位，闹钟，发送信息，状态,健康数据等
 
-url :  http://www.mzstar.cn:8080/Mozi/usereq/selelctUsereqvo
+url :  http://www.mzstar.cn:8080//Mozi/usereq/selelctUsereqvo
  
  多个imei  用逗号分开
  
@@ -661,79 +661,102 @@ url :  http://www.mzstar.cn:8080/Mozi/usereq/selelctUsereqvo
   "message": "获取设备管理员信息成功！！！",
   "code": 200,
   "data": [
-    {
-      "uevo": [
-        {
-          "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
-          "username": "小明",
-          "bluetoothStatus": null,
-          "userStatus": "跑步",
-          "deviceEnergy": null,
-          "userid": 13,
-          "managenment": "使用者",
-          "loactionStatus": false,
-          "messageStatus": false,
-          "aclokStatus": false
-        }
-      ],
-      "eqdata": {
-        "id": 21,
-        "userId": 13,
-        "heartrate": null,
-        "highpressure": null,
-        "bottompressure": null,
-        "bloodpressure": null,
-        "mocrocirculation": null,
-        "breathe": null,
-        "sleeping": "0",
-        "stepWhen": 0,
-        "carrieroad": "0",
-        "sedentary": "0",
-        "movementstate": "0",
-        "bodytemp": null,
-        "humidity": null,
-        "crash": "0",
-        "createtime": 1523412055000,
-        "qxygen": null,
-        "sleepingS": null,
-        "runS": null,
-        "stepTime": null,
-        "stepEach": null,
-        "hrv": null,
-        "mood": null
+    [
+      {
+        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+        "username": "小明",
+        "bluetoothStatus": null,
+        "userStatus": "跑步",
+        "deviceEnergy": null,
+        "userid": 13,
+        "managenment": "使用者",
+        "loactionStatus": false,
+        "messageStatus": false,
+        "aclokStatus": false,
+        "stepcount": 11,
+        "heat": 3,
+        "heartrate": 4,
+        "bloodpressure": "0/0mmHg",
+        "skindegree": null,
+        "sleepingtime": 12,
+        "crash": 1,
+        "hrv": 58,
+        "microcirculation": null,
+        "oxygen": 0,
+        "imei": "425325"
+      }
+    ],
+    [
+      {
+        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+        "username": "小明",
+        "bluetoothStatus": null,
+        "userStatus": "跑步",
+        "deviceEnergy": null,
+        "userid": 13,
+        "managenment": "监护者",
+        "loactionStatus": false,
+        "messageStatus": false,
+        "aclokStatus": false,
+        "stepcount": 11,
+        "heat": 3,
+        "heartrate": 4,
+        "bloodpressure": "0/0mmHg",
+        "skindegree": null,
+        "sleepingtime": 12,
+        "crash": 1,
+        "hrv": 58,
+        "microcirculation": null,
+        "oxygen": 0,
+        "imei": "861358039525993"
       },
-      "imei": "425325"
-    },
-    {
-      "uevo": [
-        {
-          "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
-          "username": "小明",
-          "bluetoothStatus": null,
-          "userStatus": "跑步",
-          "deviceEnergy": null,
-          "userid": 13,
-          "managenment": "观察者",
-          "loactionStatus": false,
-          "messageStatus": false,
-          "aclokStatus": false
-        },
-        {
-          "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
-          "username": "小明",
-          "bluetoothStatus": null,
-          "userStatus": "跑步",
-          "deviceEnergy": null,
-          "userid": 13,
-          "managenment": "观察者",
-          "loactionStatus": false,
-          "messageStatus": false,
-          "aclokStatus": false
-        }
-      ],
-      "eqdata": null,
-      "imei": "861358039525993"
-    }
+      {
+        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+        "username": "小明",
+        "bluetoothStatus": null,
+        "userStatus": "跑步",
+        "deviceEnergy": null,
+        "userid": 13,
+        "managenment": "观察者",
+        "loactionStatus": false,
+        "messageStatus": false,
+        "aclokStatus": false,
+        "stepcount": 11,
+        "heat": 3,
+        "heartrate": 4,
+        "bloodpressure": "0/0mmHg",
+        "skindegree": null,
+        "sleepingtime": 12,
+        "crash": 1,
+        "hrv": 58,
+        "microcirculation": null,
+        "oxygen": 0,
+        "imei": "861358039525993"
+      },
+      {
+        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+        "username": "小明",
+        "bluetoothStatus": null,
+        "userStatus": "跑步",
+        "deviceEnergy": null,
+        "userid": 13,
+        "managenment": "使用者",
+        "loactionStatus": false,
+        "messageStatus": false,
+        "aclokStatus": false,
+        "stepcount": 11,
+        "heat": 3,
+        "heartrate": 4,
+        "bloodpressure": "0/0mmHg",
+        "skindegree": null,
+        "sleepingtime": 12,
+        "crash": 1,
+        "hrv": 58,
+        "microcirculation": null,
+        "oxygen": 0,
+        "imei": "861358039525993"
+      }
+    ]
   ]
 }
 =================================================================================================================================================
