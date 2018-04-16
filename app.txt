@@ -125,6 +125,21 @@ url:   http://www.mzstar.cn:8080/Mozi/user/updatepassword
   "code": 200
 }
 
+
+============================================================================================================================
+
+忘记密码
+url :   http://www.mzstar.cn:8080/Mozi/user/forgetpassword
+
+参数：{"phone":"13539260022","userid":"13","password":"1234569","code":"84004"}
+
+
+返回：
+
+{"phone":"13539260022","userid":"13","password":"1234569","code":"84004"}
+
+
+
 ==================================================================================================================================
 
 添加闹钟
@@ -353,7 +368,7 @@ url : http://www.mzstar.cn:8080/Mozi/usereq/selectusereq
       "atlasttime": null,
       "weight": null,
       "height": null,
-      "born": null
+      "borm": null
     },
     {
       "id": 4,
@@ -372,7 +387,7 @@ url : http://www.mzstar.cn:8080/Mozi/usereq/selectusereq
       "atlasttime": 1521424750000,
       "weight": 122,
       "height": 17,
-      "born": null
+      "borm": null
     },
     {
       "id": 4,
@@ -391,7 +406,7 @@ url : http://www.mzstar.cn:8080/Mozi/usereq/selectusereq
       "atlasttime": 1521424750000,
       "weight": 122,
       "height": 17,
-      "born": null
+      "borm": null
     }
   ]
 }
@@ -648,83 +663,197 @@ service   （周  week）  （月  month）   （年 year）  （日  day）
 
 
 =========================================================================================================================
-获取设备佩戴者(使用者)
+
+获取设备关联的用户与使用者的最新数据
 
 url :  http://www.mzstar.cn:8080//Mozi/usereq/selelctUsereqvo
  
  多个imei  用逗号分开
  
-参数：  {"imeis":"425325,861358039525993"}
-
-返回：
+参数： {"imeis":"425325,861358039525993"}
 {
-  "message": "获取设备管理员信息成功！！！",
+  "message": "获取所有设备管理信息成功！！！",
   "code": 200,
   "data": [
     {
-      "member": {
+      "users": {
         "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
-        "username": "小红",
-        "bluetoothStatus": true,
+        "username": "小明",
+        "bluetoothStatus": null,
         "userStatus": "跑步",
-        "deviceEnergy": 50,
+        "deviceEnergy": null,
         "userid": 13,
-        "managenment": "使用者",
+        "managenment": null,
         "loactionStatus": false,
         "messageStatus": false,
-        "alarmclock": false,
-        "detail": [
-          {
-            "stepcount": 11,
-            "heat": 3,
-            "heartrate": 4,
-            "bloodpressure": "0/0mmHg",
-            "skindegree": 20,
-            "sleepingtime": 12
-          },
-          {
-            "imei": "425325",
-            "crash": 1,
-            "hrv": 58,
-            "oxygen": 0
-          }
-        ]
+        "aclokStatus": false
+      },
+      "eqdata": {
+        "step_when": 0,
+        "heat": 1,
+        "heartrate": 11,
+        "bloodpressure": 11,
+        "skindegree": 1,
+        "sleeping": 0,
+        "crash": 0,
+        "hrv": null,
+        "mocrocirculation": 11,
+        "qxygen": 111,
+        "imei": "425325"
       }
     },
     {
-      "member": {
+      "users": {
         "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
-        "username": "小红",
-        "bluetoothStatus": true,
+        "username": "小明",
+        "bluetoothStatus": null,
         "userStatus": "跑步",
-        "deviceEnergy": 50,
+        "deviceEnergy": null,
         "userid": 13,
-        "managenment": "监护者",
+        "managenment": null,
         "loactionStatus": false,
         "messageStatus": false,
-        "alarmclock": false,
-        "detail": [
-          {
-            "stepcount": 11,
-            "heat": 3,
-            "heartrate": 4,
-            "bloodpressure": "0/0mmHg",
-            "skindegree": 20,
-            "sleepingtime": 12
-          },
-          {
-            "imei": "861358039525993",
-            "crash": 1,
-            "hrv": 58,
-            "oxygen": 0
-          }
-        ]
+        "aclokStatus": false
+      },
+      "eqdata": {
+        "step_when": 0,
+        "heat": 1,
+        "heartrate": 11,
+        "bloodpressure": 11,
+        "skindegree": 1,
+        "sleeping": 0,
+        "crash": 0,
+        "hrv": null,
+        "mocrocirculation": 11,
+        "qxygen": 111,
+        "imei": "861358039515150"
       }
     },
-    
-   
+    {
+      "users": {
+        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+        "username": "小明",
+        "bluetoothStatus": null,
+        "userStatus": "跑步",
+        "deviceEnergy": null,
+        "userid": 13,
+        "managenment": null,
+        "loactionStatus": false,
+        "messageStatus": false,
+        "aclokStatus": false
+      },
+      "eqdata": {
+        "step_when": 0,
+        "heat": 1,
+        "heartrate": 11,
+        "bloodpressure": 11,
+        "skindegree": 1,
+        "sleeping": 0,
+        "crash": 0,
+        "hrv": null,
+        "mocrocirculation": 11,
+        "qxygen": 111,
+        "imei": "861358039525993"
+      }
+    }
+  ]
+================================================================================================================================================
+获取设备佩戴者（使用者）
+
+url   http://www.mzstar.cn:8080/Mozi/usereq/selectuserdata
+
+ 参数：  {"userid":"13"}
+ 
+ 返回：
+ 
+ {
+  "message": "获取所有设备使用者信息成功！！！",
+  "code": 200,
+  "data": [
+    {
+      "users": {
+        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+        "username": "小明",
+        "bluetoothStatus": null,
+        "userStatus": "跑步",
+        "deviceEnergy": null,
+        "userid": 13,
+        "managenment": null,
+        "loactionStatus": false,
+        "messageStatus": false,
+        "aclokStatus": false
+      },
+      "eqdata": {
+        "step_when": 0,
+        "heat": 1,
+        "heartrate": 11,
+        "bloodpressure": 11,
+        "skindegree": 1,
+        "sleeping": 0,
+        "crash": 0,
+        "hrv": null,
+        "mocrocirculation": 11,
+        "qxygen": 111,
+        "imei": "425325"
+      }
+    },
+    {
+      "users": {
+        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+        "username": "小明",
+        "bluetoothStatus": null,
+        "userStatus": "跑步",
+        "deviceEnergy": null,
+        "userid": 13,
+        "managenment": null,
+        "loactionStatus": false,
+        "messageStatus": false,
+        "aclokStatus": false
+      },
+      "eqdata": {
+        "step_when": 0,
+        "heat": 1,
+        "heartrate": 11,
+        "bloodpressure": 11,
+        "skindegree": 1,
+        "sleeping": 0,
+        "crash": 0,
+        "hrv": null,
+        "mocrocirculation": 11,
+        "qxygen": 111,
+        "imei": "861358039515150"
+      }
+    },
+    {
+      "users": {
+        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
+        "username": "小明",
+        "bluetoothStatus": null,
+        "userStatus": "跑步",
+        "deviceEnergy": null,
+        "userid": 13,
+        "managenment": null,
+        "loactionStatus": false,
+        "messageStatus": false,
+        "aclokStatus": false
+      },
+      "eqdata": {
+        "step_when": 0,
+        "heat": 1,
+        "heartrate": 11,
+        "bloodpressure": 11,
+        "skindegree": 1,
+        "sleeping": 0,
+        "crash": 0,
+        "hrv": null,
+        "mocrocirculation": 11,
+        "qxygen": 111,
+        "imei": "861358039525993"
+      }
+    }
   ]
 }
+ 
 =================================================================================================================================================
 获取用户相关联的设备信息
 
