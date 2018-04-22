@@ -68,6 +68,7 @@ url: http://www.mzstar.cn:8080/Mozi/user/updateavatar
 
 {
   "message": "修改头像成功！！!",
+   "data": "http://120.76.201.150:8080/avatars/微信图片_20180414105000.jpg",
   "code": 200
 }
 
@@ -84,8 +85,9 @@ url:   http://www.mzstar.cn:8080/Mozi/user/updateUser
 
 返回：
 {
-  "message": "修改成功！！!",
-  "code": 200
+  "message": "修改头像成功！！!",
+  "code": 200,
+  "data": "http://120.76.201.150:8080/avatars/微信图片_20180414105000.jpg"
 }
 
 
@@ -267,9 +269,12 @@ url : http://www.mzstar.cn:8080/Mozi/positionig/selectimeiPositionig
 {
   "message": "获取定位信息成功！！！",
   "code": 200,
-  "data": "省：北京市，市：北京市，区：海淀区"
+  "data": {
+    "address": "省：广东省，市：中山市",
+    "latitude": "22.3",
+    "longitude": "113.4"
+  }
 }
-
 ===============================================================================================================================
 添加留言
 url http://www.mzstar.cn:8080/Mozi/leave/addLeave
