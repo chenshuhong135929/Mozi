@@ -433,13 +433,13 @@ url : http://www.mzstar.cn:8080/Mozi/usereq/deleteequse
 
 url: http://www.mzstar.cn:8080/Mozi/qrcode/generateqrcode
 
-参数：{"userId":"5"}
+参数：{"imei":"425325"}
 
 返回：
 {
   "message": "生成二维码！！！",
   "code": 200,
-  "data": "http://192.168.1.108:8080/Mozi/usereq/addqrcodObserved?imei=425325&authorized=已授权&userId="
+  "data": "http://mzstar.com:8080/Mozi/usereq/addqrcodObserved?imei=425325&authorized=已授权&userId="
 }
 ========================================================================================
 获取用户最新健康数据
