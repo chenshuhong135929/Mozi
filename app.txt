@@ -771,94 +771,270 @@ url   http://www.mzstar.cn:8080/Mozi/usereq/selectuserdata
  
  返回：
  
- {
+{
   "message": "获取所有设备使用者信息成功！！！",
   "code": 200,
   "data": [
     {
-      "users": {
-        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
-        "username": "小明",
-        "bluetoothStatus": null,
-        "userStatus": "跑步",
-        "deviceEnergy": null,
-        "userid": 13,
-        "managenment": null,
-        "loactionStatus": false,
-        "messageStatus": false,
-        "aclokStatus": false
-      },
-      "eqdata": {
-        "step_when": 0,
-        "heat": 1,
-        "heartrate": 11,
-        "bloodpressure": 11,
-        "skindegree": 1,
-        "sleeping": 0,
-        "crash": 0,
-        "hrv": null,
-        "mocrocirculation": 11,
-        "qxygen": 111,
-        "imei": "425325"
-      }
+      "userStatus": "跑步",
+      "aclokStatus": false,
+      "userid": 13,
+      "managenment": "管理员",
+      "deviceEnergy": 90,
+      "bluetoothStatus": true,
+      "messageStatus": false,
+      "loactionStatus": false,
+      "imei": "425325",
+      "detail": [
+        {
+          "unit": "千卡",
+          "name": "heat",
+          "lastestValue": "1",
+          "category": "1",
+          "desc": "热量"
+        },
+        {
+          "unit": "次/分",
+          "name": "heartrate",
+          "lastestValue": 11,
+          "category": "2",
+          "desc": "心率"
+        },
+        {
+          "unit": "mmHg",
+          "name": "pressure",
+          "lastestValue": 11,
+          "category": "3",
+          "desc": "血压"
+        },
+        {
+          "unit": "单位",
+          "name": "mocrocirculation",
+          "lastestValue": 11,
+          "category": "4",
+          "desc": "微循环"
+        },
+        {
+          "unit": "秒",
+          "name": "sleeping",
+          "lastestValue": 0,
+          "category": "5",
+          "desc": "睡眠"
+        },
+        {
+          "unit": "度",
+          "name": "skindegree",
+          "lastestValue": "1",
+          "category": "6",
+          "desc": "肤度"
+        },
+        {
+          "unit": "次",
+          "name": "crash",
+          "lastestValue": 0,
+          "category": "7",
+          "desc": "冲撞"
+        },
+        {
+          "unit": "单位",
+          "name": "hrv",
+          "lastestValue": 11,
+          "category": "8",
+          "desc": "心跳异常"
+        },
+        {
+          "unit": "步",
+          "name": "Step_when",
+          "lastestValue": 0,
+          "category": "9",
+          "desc": "当天步数"
+        },
+        {
+          "unit": "单位",
+          "name": "qxygen",
+          "lastestValue": 111,
+          "category": "10",
+          "desc": "血氧"
+        }
+      ],
+      "iconPath": "http://120.76.201.150:8080/avatars/微信图片_20180414105000.jpg",
+      "updatetime": 1523412055000,
+      "username": "小明"
     },
     {
-      "users": {
-        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
-        "username": "小明",
-        "bluetoothStatus": null,
-        "userStatus": "跑步",
-        "deviceEnergy": null,
-        "userid": 13,
-        "managenment": null,
-        "loactionStatus": false,
-        "messageStatus": false,
-        "aclokStatus": false
-      },
-      "eqdata": {
-        "step_when": 0,
-        "heat": 1,
-        "heartrate": 11,
-        "bloodpressure": 11,
-        "skindegree": 1,
-        "sleeping": 0,
-        "crash": 0,
-        "hrv": null,
-        "mocrocirculation": 11,
-        "qxygen": 111,
-        "imei": "861358039515150"
-      }
+      "userStatus": "跑步",
+      "aclokStatus": false,
+      "userid": 13,
+      "managenment": "管理员",
+      "deviceEnergy": 90,
+      "bluetoothStatus": true,
+      "messageStatus": false,
+      "loactionStatus": false,
+      "imei": "861358039515150",
+      "detail": [
+        {
+          "unit": "千卡",
+          "name": "heat",
+          "lastestValue": "1",
+          "category": "1",
+          "desc": "热量"
+        },
+        {
+          "unit": "次/分",
+          "name": "heartrate",
+          "lastestValue": 11,
+          "category": "2",
+          "desc": "心率"
+        },
+        {
+          "unit": "mmHg",
+          "name": "pressure",
+          "lastestValue": 11,
+          "category": "3",
+          "desc": "血压"
+        },
+        {
+          "unit": "单位",
+          "name": "mocrocirculation",
+          "lastestValue": 11,
+          "category": "4",
+          "desc": "微循环"
+        },
+        {
+          "unit": "秒",
+          "name": "sleeping",
+          "lastestValue": 0,
+          "category": "5",
+          "desc": "睡眠"
+        },
+        {
+          "unit": "度",
+          "name": "skindegree",
+          "lastestValue": "1",
+          "category": "6",
+          "desc": "肤度"
+        },
+        {
+          "unit": "次",
+          "name": "crash",
+          "lastestValue": 0,
+          "category": "7",
+          "desc": "冲撞"
+        },
+        {
+          "unit": "单位",
+          "name": "hrv",
+          "lastestValue": 11,
+          "category": "8",
+          "desc": "心跳异常"
+        },
+        {
+          "unit": "步",
+          "name": "Step_when",
+          "lastestValue": 0,
+          "category": "9",
+          "desc": "当天步数"
+        },
+        {
+          "unit": "单位",
+          "name": "qxygen",
+          "lastestValue": 111,
+          "category": "10",
+          "desc": "血氧"
+        }
+      ],
+      "iconPath": "http://120.76.201.150:8080/avatars/微信图片_20180414105000.jpg",
+      "updatetime": 1523412055000,
+      "username": "小明"
     },
     {
-      "users": {
-        "iconPath": "http://120.76.201.150:8080/avatars/timg.jpg",
-        "username": "小明",
-        "bluetoothStatus": null,
-        "userStatus": "跑步",
-        "deviceEnergy": null,
-        "userid": 13,
-        "managenment": null,
-        "loactionStatus": false,
-        "messageStatus": false,
-        "aclokStatus": false
-      },
-      "eqdata": {
-        "step_when": 0,
-        "heat": 1,
-        "heartrate": 11,
-        "bloodpressure": 11,
-        "skindegree": 1,
-        "sleeping": 0,
-        "crash": 0,
-        "hrv": null,
-        "mocrocirculation": 11,
-        "qxygen": 111,
-        "imei": "861358039525993"
-      }
+      "userStatus": "跑步",
+      "aclokStatus": false,
+      "userid": 13,
+      "managenment": "管理员",
+      "deviceEnergy": 90,
+      "bluetoothStatus": true,
+      "messageStatus": false,
+      "loactionStatus": false,
+      "imei": "861358039525993",
+      "detail": [
+        {
+          "unit": "千卡",
+          "name": "heat",
+          "lastestValue": "1",
+          "category": "1",
+          "desc": "热量"
+        },
+        {
+          "unit": "次/分",
+          "name": "heartrate",
+          "lastestValue": 11,
+          "category": "2",
+          "desc": "心率"
+        },
+        {
+          "unit": "mmHg",
+          "name": "pressure",
+          "lastestValue": 11,
+          "category": "3",
+          "desc": "血压"
+        },
+        {
+          "unit": "单位",
+          "name": "mocrocirculation",
+          "lastestValue": 11,
+          "category": "4",
+          "desc": "微循环"
+        },
+        {
+          "unit": "秒",
+          "name": "sleeping",
+          "lastestValue": 0,
+          "category": "5",
+          "desc": "睡眠"
+        },
+        {
+          "unit": "度",
+          "name": "skindegree",
+          "lastestValue": "1",
+          "category": "6",
+          "desc": "肤度"
+        },
+        {
+          "unit": "次",
+          "name": "crash",
+          "lastestValue": 0,
+          "category": "7",
+          "desc": "冲撞"
+        },
+        {
+          "unit": "单位",
+          "name": "hrv",
+          "lastestValue": 11,
+          "category": "8",
+          "desc": "心跳异常"
+        },
+        {
+          "unit": "步",
+          "name": "Step_when",
+          "lastestValue": 0,
+          "category": "9",
+          "desc": "当天步数"
+        },
+        {
+          "unit": "单位",
+          "name": "qxygen",
+          "lastestValue": 111,
+          "category": "10",
+          "desc": "血氧"
+        }
+      ],
+      "iconPath": "http://120.76.201.150:8080/avatars/微信图片_20180414105000.jpg",
+      "updatetime": 1523412055000,
+      "username": "小明"
     }
   ]
 }
- 
 =================================================================================================================================================
 获取用户相关联的设备信息
 
@@ -904,6 +1080,20 @@ url:  http://www.mzstar.cn:8080/Mozi/equipment/userequipments
 ===============================================================================================
 
 
+添加设备紧急联系人
+
+url:  http://www.mzstar.cn:8080/Mozi/equipment/addurgent
+
+
+参数：{"phone1":"13539264097","imei":"425325","phone2":"1592930640"}
+
+返回：
+{
+  "message": "添加紧急联系成功!!!",
+  "code": 200
+}
+
+=======================================================================================
 
 
 
