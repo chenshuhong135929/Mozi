@@ -79,15 +79,15 @@ url: http://www.mzstar.cn:8080/Mozi/user/updateavatar
 url:   http://www.mzstar.cn:8080/Mozi/user/updateUser
 
 参数：  
-{"account":"1234561","password":"123456","name":"小明5","age":"12","gender":"男","phone":"122","address":"122","wechat":"122","qq":"122","weight":"122","height":"17","id":"5"}
+{"password":"123456","name":"小明5","age":"12","gender":"男","phone":"122","address":"122","wechat":"122","qq":"122","weight":"122","height":"17","id":"20"}
 
 
 
 返回：
 {
-  "message": "修改头像成功！！!",
+  "message": "修改成功！！!",
   "code": 200,
-  "data": "http://120.76.201.150:8080/avatars/微信图片_20180414105000.jpg"
+ 
 }
 
 
@@ -148,7 +148,7 @@ url :   http://www.mzstar.cn:8080/Mozi/user/forgetpassword
 
 url: http://www.mzstar.cn:8080/Mozi/clock/addClock
 
-参数：{"clockdate":"11:11","current":"闹钟","imei":"123456","frequency":"每天"}
+参数：{"clockdate":"11:11","current":"闹钟","imei":"425325","frequency":"每天"}
 
 返回：
 {
@@ -163,7 +163,7 @@ url: http://www.mzstar.cn:8080/Mozi/clock/addClock
 
 url: http://www.mzstar.cn:8080/Mozi/clock/updateClock
 
-参数： {"clockdate":"11:11","current":"每天","imei":"123456","frequency":"11","status":"1","id":"1"}
+参数： {"clockdate":"11:11","current":"闹钟名字","imei":"425325","frequency":"1","status":"1","id":"1"}
 
 返回：
 
@@ -196,7 +196,7 @@ url: http://www.mzstar.cn:8080/Mozi/clock/deleteClock
 
 url: http://www.mzstar.cn:8080/Mozi/clock/selectclocks
 
-参数 ：{"imei":"123456"}
+参数 ：{"imei":"425325"}
 
 返回：
 {
@@ -204,18 +204,34 @@ url: http://www.mzstar.cn:8080/Mozi/clock/selectclocks
   "code": 200,
   "data": [
     {
+      "id": 2,
+      "clockdate": "9:42",
+      "current": "闹钟名称",
+      "imei": "425325",
+      "frequency": "1,2,3,4,5,6",
+      "status": "1",
+      "cratetime": 1521804609000
+    },
+    {
       "id": 3,
-      "clockdate": "11:11",
-      "current": "每天",
-      "imei": "123456",
-      "frequency": "11",
-      "status": "待执行",
+      "clockdate": "10:50",
+      "current": "闹钟名称",
+      "imei": "425325",
+      "frequency": "1",
+      "status": "1",
       "cratetime": 1521804643000
+    },
+    {
+      "id": 4,
+      "clockdate": "11:11",
+      "current": "闹钟",
+      "imei": "425325",
+      "frequency": "7",
+      "status": "0",
+      "cratetime": 1524470617000
     }
   ]
 }
-
-
 ===================================================================================================huoqu==========
 获取广告数据
 
@@ -446,37 +462,37 @@ url: http://www.mzstar.cn:8080/Mozi/qrcode/generateqrcode
  
  url : http://www.mzstar.cn:8080/Mozi/equipmentData/selectdata
  
- 请求参数： {"imei":"425325"}
+ 请求参数： {"userid":"13"}
  
  返回：
- {
+{
   "message": "获取用户最新健康数据成功！！！",
   "code": 200,
   "data": {
-    "id": 17,
-    "userId": 4,
+    "id": 21,
+    "userId": 13,
     "heartrate": 11,
-    "highpressure": "11",
-    "bottompressure": "11",
-    "bloodpressure": "11",
-    "mocrocirculation": "11",
-    "breathe": "11",
-    "sleeping": "11",
-    "stepWhen": 11,
-    "carrieroad": "11",
-    "sedentary": "11",
-    "movementstate": "11",
-    "bodytemp": "11",
-    "humidity": "11",
-    "crash": "11",
-    "createtime": 1522834363000,
-    "qxygen": "11",
-    "sleepingS": "11",
-    "runS": "11",
-    "stepTime": 11,
-    "stepEach": 1111,
-    "hrv": "11",
-    "mood": "11"
+    "highpressure": 11,
+    "bottompressure": 11,
+    "bloodpressure": 11,
+    "mocrocirculation": 11,
+    "breathe": 1,
+    "sleeping": 0,
+    "stepWhen": 0,
+    "carrieroad": 0,
+    "sedentary": "0",
+    "movementstate": 0,
+    "bodytemp": null,
+    "humidity": null,
+    "crash": 0,
+    "createtime": 1523412055000,
+    "qxygen": 111,
+    "sleepingS": 1,
+    "runS": 1,
+    "stepTime": 1,
+    "stepEach": 11,
+    "hrv": 11,
+    "mood": null
   }
 }
 
@@ -494,22 +510,24 @@ url : http://www.mzstar.cn:8080/Mozi/equipment/selectEquipment
   "message": "获取设备基本信息成功！！！",
   "code": 200,
   "data": {
-    "id": 1,
+    "id": 3,
     "imei": "425325",
     "lordpower": 78,
     "signalxhao": "17",
-    "bluetoothType": null,
-    "eqStatus": null,
-    "createtime": null,
-    "updatetime": 1522656421000,
+    "bluetoothType": "蓝牙类型",
+    "eqStatus": "H:0",
+    "createtime": 1523168392000,
+    "updatetime": 1523412055000,
     "eqtype": "1",
-    "bluetoothName": null,
-    "bluetoothStatus": null,
-    "bluetoothElectricity": null,
-    "clock": null,
-    "phone1": null,
-    "phone2": null,
-    "uploadtime": null
+    "bluetoothName": "蓝牙名字",
+    "bluetoothStatus": "1",
+    "bluetoothElectricity": 90,
+    "clock": "闹钟",
+    "phone1": "13539266",
+    "phone2": "13539266",
+    "name": "设备名称",
+    "version": "1.1",
+    "uploadtime": 1524292575000
   }
 }
 
@@ -1095,10 +1113,49 @@ url:  http://www.mzstar.cn:8080/Mozi/equipment/addurgent
 
 =======================================================================================
 
+获取使用者首页信息
+
+url :  http://www.mzstar.cn:8080/Mozi/usereq/userdata
 
 
+参数 ：{"imei":"425325"}
 
 
+返回：
+{
+  "message": "获取设备使用者信息成功！！！",
+  "code": 200,
+  "data": {
+    "userStatus": "跑步",
+    "aclokStatus": false,
+    "equipment": {
+      "ename": "设备名称",
+      "estatus": false,
+      "bstatus": true,
+      "bname": "蓝牙名字",
+      "eElectricity": 90,
+      "bElectricity": 90
+    },
+    "userid": 13,
+    "deviceEnergy": 90,
+    "bluetoothStatus": true,
+    "messageStatus": false,
+    "loactionStatus": false,
+    "imei": "425325",
+    "iconPath": "http://120.76.201.150:8080/avatars/微信图片_20180414105000.jpg",
+    "guardian": {
+      "小明": "使用者"
+    },
+    "user": {
+      "gender": "男",
+      "born": 1522480007000,
+      "weight": 122,
+      "height": 17
+    },
+    "username": "小明"
+  }
+}
+==============================================================================================
 
 
 
